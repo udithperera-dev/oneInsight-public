@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>dev.akurupela.oneinsight</id>
+    <name>OneInsight</name>
+    <vendor url="https://akurupela.com">Udith Perera</vendor>
+
+    <description><![CDATA[
+      Supports Android Studio and IntelliJ IDEA with the Android plugin installed.
+      <br><br>
+      Inspect network traffic using Android App Inspection and in-process ART hooks.
+      No VPN, proxy, certificate installation, or app source changes required.
+      <br><br>
+      <b>Developer:</b> Udith Perera<br>
+      <b>Website:</b> <a href="https://akurupela.com">akurupela.com</a><br>
+      <b>GitHub:</b> <a href="https://github.com/udihperera-dev">@udihperera-dev</a>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="dev.packetins.studio.PacketInsProjectService"/>
+        <toolWindow id="OneInsight"
+                    anchor="bottom"
+                    factoryClass="dev.packetins.studio.ui.PacketInsToolWindowFactory"
+                    icon="/icons/packetins.svg"/>
+        <notificationGroup id="OneInsight" displayType="BALLOON"/>
+    </extensions>
+</idea-plugin>

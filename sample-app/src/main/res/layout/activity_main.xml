@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnHttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send REST Request" />
+
+    <Button
+        android:id="@+id/btnWsConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect WebSocket" />
+
+    <Button
+        android:id="@+id/btnWsSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send WebSocket Message" />
+
+    <Button
+        android:id="@+id/btnWsClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close WebSocket" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/logView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:typeface="monospace" />
+    </ScrollView>
+</LinearLayout>
