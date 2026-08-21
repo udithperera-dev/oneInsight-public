@@ -1,13 +1,10 @@
 package dev.packetins.studio.inspection
 
-import com.android.tools.idea.appinspection.inspector.api.process.ProcessDescriptor
-
-class InspectableProcess internal constructor(
+data class InspectableProcess(
     val packageName: String,
     val processName: String,
     val pid: Int,
     val deviceSerial: String,
-    internal val descriptor: ProcessDescriptor,
 ) {
     val stableId: String = "$deviceSerial:$pid"
 
